@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faizan Shahzad | Executive IT Leader Portfolio</title>
+    <style>
+        :root {
+            --bg-dark: #030712;
+            --bg-card: #0f172a;
+            --bg-pill: #1e293b;
+            --primary-glow: #2563eb;
+            --secondary-glow: #3b82f6;
+            --accent: #60a5fa;
+            --fiverr-green: #1dbf73;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border: rgba(255, 255, 255, 0.08);
+            --radius: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 5rem;
+        }
+
+        /* Hero Canvas */
+        header {
+            position: relative;
+            background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.15), transparent 50%), 
+                        radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.05), transparent 40%);
+            padding: 7rem 2rem 5rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header-container h1 {
+            font-size: 3.8rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            margin-bottom: 0.75rem;
+            background: linear-gradient(to right, #ffffff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header-container .title-sub {
+            color: #cbd5e1;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .header-container .location {
+            color: var(--accent);
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .header-container .tagline {
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            max-width: 800px;
+            margin: 0 auto 2.5rem auto;
+        }
+
+        /* Action Link Button Framework */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.25rem;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.85rem 2.25rem;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            display: inline-block;
+        }
+
+        .social-links a.linkedin-btn {
+            background: linear-gradient(135deg, var(--primary-glow) 0%, #1d4ed8 100%);
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+        }
+
+        .social-links a.linkedin-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(37, 99, 235, 0.5);
+        }
+
+        .social-links a.fiverr-btn {
+            background: linear-gradient(135deg, var(--fiverr-green) 0%, #109655 100%);
+            box-shadow: 0 4px 20px rgba(29, 191, 115, 0.3);
+        }
+
+        .social-links a.fiverr-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(29, 191, 115, 0.5);
+        }
+
+        /* Visual KPI Board Dashboard */
+        .metrics-banner {
+            max-width: 1100px;
+            margin: -2.5rem auto 4rem auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            padding: 0 1.5rem;
+        }
+
+        .metric-card {
+            background: var(--bg-card);
+            padding: 2rem 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .metric-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 0.25rem;
+        }
+
+        .metric-label {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        /* Structural Container System */
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            background: var(--bg-card);
+            padding: 3.5rem;
+            border-radius: var(--radius);
+            margin-bottom: 3.5rem;
+            border: 1px solid var(--border);
+        }
+
+        h2 {
+            color: white;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            letter-spacing: -0.03em;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.75rem;
+        }
+
+        p {
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+            color: #d1d5db;
+        }
+
+        /* Core Matrix Grid */
+        .competencies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .competency-item {
+            background: var(--bg-pill);
+            padding: 1.2rem;
+            border-left: 4px solid var(--primary-glow);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            font-weight: 600;
+            color: white;
+            font-size: 0.95rem;
+        }
+
+        /* Career Track Component */
+        .job-card {
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .job-card:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .job-title {
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 700;
+        }
+
+        .job-company {
+            font-size: 1.2rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-top: 0.15rem;
+        }
+
+        .job-meta {
+            color: var(--text-main);
+            font-size: 0.9rem;
+            font-weight: 600;
+            background: var(--bg-pill);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+        }
+
+        .job-scope {
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+            font-size: 0.95rem;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 0.75rem 1rem;
+            border-left: 3px solid var(--text-muted);
+            border-radius: 0 4px 4px 0;
+        }
+
+        .bullet-list {
+            list-style-type: none;
+        }
+
+        .bullet-list li {
+            position: relative;
+            padding-left: 1.75rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+            color: #d1d5db;
+        }
+
+        .bullet-list li::before {
+            content: "→";
+            color: var(--accent);
+            font-weight: 700;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* Fiverr Matrix Grid Details */
+        .fiverr-projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+            margin-top: 1.5rem;
+        }
+
+        .fiverr-project-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .fiverr-project-card:hover {
+            border-color: var(--fiverr-green);
+        }
+
+        .fiverr-project-tag {
+            align-self: flex-start;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--fiverr-green);
+            background: rgba(29, 191, 115, 0.1);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        .fiverr-project-card h4 {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .fiverr-project-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .fiverr-project-footer {
+            font-size: 0.85rem;
+            color: #cbd5e1;
+            border-top: 1px solid var(--border);
+            padding-top: 0.75rem;
+        }
+
+        /* Achievements Columns */
+        .grid-two-col {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 600px) {
+            .grid-two-col { grid-template-columns: 1fr; }
+        }
+
+        .card-sub {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            transition: all 0.2s ease;
+        }
+
+        .card-sub:hover {
+            border-color: var(--accent);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .card-sub h3 {
+            color: white;
+            font-size: 1.25rem;
+            margin-bottom: 0.85rem;
+            font-weight: 700;
+        }
+
+        /* Qualifications Framework */
+        .edu-item {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            margin-bottom: 1rem;
+            border: 1px solid var(--border);
+        }
+
+        .edu-title {
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: white;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1rem;
+        }
+
+        .cert-item {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 1.25rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 1px solid var(--border);
+            color: #e5e7eb;
+        }
+
+        /* Contact Structure Block */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .contact-box {
+            padding: 2rem 1.5rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .contact-box h4 {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .contact-box p {
+            margin-bottom: 0;
+            font-weight: 700;
+            font-size: 1.1rem;
+            word-break: break-all;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: #020617;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            border-top: 1px solid var(--border);
+        }
+
+        @media (max-width: 768px) {
+            header { padding: 5rem 1rem 4rem 1rem; }
+            .header-container h1 { font-size: 2.6rem; }
+            .social-links { flex-direction: column; gap: 0.75rem; align-items: center; }
+            .social-links a { width: 100%; max-width: 320px; }
+            section { padding: 2.2rem 1.5rem; }
+            .job-header { flex-direction: column; align-items: flex-start; }
+            .job-meta { margin-top: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>Faizan Shahzad</h1>
+            <div class="title-sub">Head of IT & IT Operations Leader | IT Infrastructure & Cybersecurity</div>
+            <div class="location">📍 Karachi Division, Sindh, Pakistan</div>
+            <div class="tagline">Strategic IT Operations & Infrastructure Management Leader with 15+ years of proven experience driving IT transformation, governance, and cybersecurity across the energy, manufacturing, and services sectors.</div>
+            <div class="social-links">
+                <a class="linkedin-btn" href="https://www.linkedin.com/in/faizan-shahzad-37714b52" target="_blank">Connect on LinkedIn</a>
+                <a class="fiverr-btn" href="https://www.fiverr.com/faizan_shahzad8" target="_blank">Order on Fiverr</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Operational KPI Scoreboard -->
+    <div class="metrics-banner">
+        <div class="metric-card">
+            <div class="metric-number">15+ Yrs</div>
+            <div class="metric-label">Proven IT Leadership Scale</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-number">65+</div>
+            <div class="metric-label">Global Remote Projects Completed</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-number">6 Co.</div>
+            <div class="metric-label">Energy Subsidiaries Governed</div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Profile Summary Section -->
+        <section id="summary">
+            <h2>Executive Summary</h2>
+            <p>Strategic IT Operations & Infrastructure Management Leader with 15+ years of proven experience driving IT transformation, governance, and cybersecurity across the energy, manufacturing, and services sectors. Expert in aligning enterprise technology with business goals, leading cross-functional IT operations, infrastructure deployment, cloud adoption, and security frameworks. Skilled at optimizing performance, reducing costs, and building future-ready IT environments.</p>
+            <p>Known as a business-centric IT leader who transforms IT divisions into enablers of growth, efficiency, and enterprise resilience across complex physical site installations and group head offices.</p>
+        </section>
+
+        <!-- Core Strengths & Core Competencies Matrix -->
+        <section id="competencies">
+            <h2>Core Strengths & Competencies</h2>
+            <div class="competencies-grid">
+                <div class="competency-item">IT Operations & Infrastructure Management</div>
+                <div class="competency-item">Enterprise Technology Strategy</div>
+                <div class="competency-item">Cybersecurity & Risk Mitigation</div>
+                <div class="competency-item">Cloud & Hybrid Deployments (Azure, Office 365)</div>
+                <div class="competency-item">Digital Transformation & IT Governance</div>
+                <div class="competency-item">Regulatory Compliance & Audit Readiness (NEPRA)</div>
+                <div class="competency-item">Business Continuity & Disaster Recovery (BCP)</div>
+                <div class="competency-item">ERP, SCADA & Data Integration (SAP B1, SQL)</div>
+                <div class="competency-item">Vendor Consolidation & Cost Optimization</div>
+                <div class="competency-item">Executive C-Level & Board Reporting</div>
+            </div>
+        </section>
+
+        <!-- Historical Executive Experience Timeline -->
+        <section id="experience">
+            <h2>Professional Experience</h2>
+
+            <!-- Job 1 -->
+            <div class="job-card">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Manager IT / Head of IT</div>
+                        <div class="job-company">Gul Ahmed Energy Group</div>
+                    </div>
+                    <div class="job-meta">Feb 2017 – Present</div>
+                </div>
+                <div class="job-scope">
+                    <strong>Subsidiary Framework:</strong> Gul Ahmed Wind Power Ltd | Gul Ahmed Energy Ltd | Gul Ahmed Electric Ltd | GAE Power Solutions Ltd | Metro Power Co. Ltd | Metro Wind Power Ltd
+                </div>
+                <ul class="bullet-list">
+                    <li>Drive IT strategy, operations, infrastructure management, and digital transformation across six companies under Gul Ahmed Energy Group.</li>
+                    <li>Manage and develop a cross-functional IT team of 5 (Deputy Manager IT, System Administrator, Network/System Administrator, IT Executive).</li>
+                    <li><strong>Strategic Venture Launch:</strong> Extended IT leadership infrastructure design, governance frameworks, and operational readiness for QuantumGlobal Data Center Ltd (Tier-3 compliant enterprise service delivery).</li>
+                    <li><strong>Enterprise Cloud & Collaboration:</strong> Directed complex Office 365 tenant-to-tenant migrations (Exchange, OneDrive, Teams, SharePoint) in a live operational environment with zero business disruption.</li>
+                    <li><strong>Cybersecurity Perimeter:</strong> Institutionalized enterprise defense and threat response via Fortinet NGFW, Sophos XGS/XG, Sophos Intercept X, and BitDefender GravityZone; engineered automated EDR playbooks.</li>
+                    <li><strong>Industrial Operations Data:</strong> Led SAP Business One steering committees and integrated mission-critical SCADA middleware data streams with SQL analytical pipelines.</li>
+                    <li><strong>Disaster Recovery Execution:</strong> Designed and executed high-availability BCP roadmaps across remote plant environments using centralized NOC configurations and PRTG proactive health monitoring.</li>
+                </ul>
+            </div>
+
+            <!-- Job 2: Freelance Upwork Track -->
+            <div class="job-card">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Professional Freelancer</div>
+                        <div class="job-company">Upwork</div>
+                    </div>
+                    <div class="job-meta">Feb 2019 – Mar 2025</div>
+                </div>
+                <ul class="bullet-list">
+                    <li>Provided top-tier global remote consulting infrastructure alignment, systems design auditing, and enterprise technology implementation engineering for diverse international business sectors.</li>
+                </ul>
+            </div>
+
+            <!-- Job 3: Freelance Fiverr Track (UPDATED MATRIX WITH SCREENSHOT DATA) -->
+            <div class="job-card">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Professional Freelancer / Infrastructure Consultant</div>
+                        <div class="job-company">Fiverr</div>
+                    </div>
+                    <div class="job-meta">Feb 2019 – Mar 2025</div>
+                </div>
+                <p>Delivered specialized cloud migration, systems design, physical defense infrastructure layout, and enterprise network security deployment track records for global corporate clients.</p>
+                
+                <div class="fiverr-projects-grid">
+                    <div class="fiverr-project-card">
+                        <div>
+                            <div class="fiverr-project-tag">Cloud &amp; Identity</div>
+                            <h4>Office 365 Tenant &amp; Email Domain Migrations</h4>
+                            <p>Handled full domain configurations and tenant cutovers mapping into Microsoft Exchange online cloud environments with zero message drops.</p>
+                        </div>
+                        <div class="fiverr-project-footer">
+                            <strong>Deliverables:</strong> MX/SPF/DKIM alignment, tenant transitions.
+                        </div>
+                    </div>
+
+                    <div class="fiverr-project-card">
+                        <div>
+                            <div class="fiverr-project-tag">Networking</div>
+                            <h4>Ubiquiti UniFi Enterprise Wi-Fi Deployments</h4>
+                            <p>Provisioned UniFi remote cloud controllers, mapped logical network topologies, isolated client VLAN channels, and resolved baseline performance bottlenecks.</p>
+                        </div>
+                        <div class="fiverr-project-footer">
+                            <strong>Deliverables:</strong> Controller configuration, SSID isolation layouts.
+                        </div>
+                    </div>
+
+                    <div class="fiverr-project-card">
+                        <div>
+                            <div class="fiverr-project-tag">Systems Admin</div>
+                            <h4>Windows Server &amp; Domain Controller Provisioning</h4>
+                            <p>Configured primary Active Directory Domain Controllers, optimized underlying DNS schemas, structured target Organizational Units, and unified corporate access environments.</p>
+                        </div>
+                        <div class="fiverr-project-footer">
+                            <strong>Deliverables:</strong> Active Directory DS, Group Policy mappings.
+                        </div>
+                    </div>
+
+                    <div class="fiverr-project-card">
+                        <div>
+                            <div class="fiverr-project-tag">Physical Security</div>
+                            <h4>Enterprise NVR / DVR &amp; CCTV Stream Configurations</h4>
+                            <p>Configured Network Video Recorders and physical security IP cameras. Set up customized mapping layouts, secure external DDNS configurations, and remote access streams.</p>
+                        </div>
+                        <div class="fiverr-project-footer">
+                            <strong>Deliverables:</strong> Network video recording routing, dynamic DNS.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Job 4 -->
+            <div class="job-card">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Assistant Manager IT</div>
+                        <div class="job-company">Crystallite Pakistan Private Limited (BPO IT Services)</div>
+                    </div>
+                    <div class="job-meta">Sep 2012 – June 2016</div>
+                </div>
+                <ul class="bullet-list">
+                    <li>Directed IT operations for an international BPO services provider, managing enterprise infrastructure, servers, and multi-site connectivity for over 100+ endpoints.</li>
+                    <li>Led deployment of Microsoft Windows Server configurations, Exchange, and virtualization infrastructure to support 24/7/365 business uptime.</li>
+                    <li>Optimized assets and reduced operational expenditure (OPEX) via aggressive vendor renegotiations and proactive license lifecycle management.</li>
+                </ul>
+            </div>
+
+            <!-- Job 5 -->
+            <div class="job-card">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Network Administrator</div>
+                        <div class="job-company">Hyeworth Pakistan / Renault Peterson</div>
+                    </div>
+                    <div class="job-meta">Sep 2011 – Sep 2012</div>
+                </div>
+                <ul class="bullet-list">
+                    <li>Administered corporate network and server infrastructure supporting nationwide business events across 70+ endpoints.</li>
+                    <li>Strengthened baseline network defense security by designing firewall patterns, endpoint protection layers, and automated backups.</li>
+                </ul>
+            </div>
+
+            <!-- Job 6 -->
+            <div class="job-card">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Network Administrator</div>
+                        <div class="job-company">Taurus Securities Limited (Subsidiary of National Bank of Pakistan)</div>
+                    </div>
+                    <div class="job-meta">Mar 2011 – Sep 2011</div>
+                </div>
+                <ul class="bullet-list">
+                    <li>Managed secure trading-floor network connectivity, firewalls, backups, and physical server arrays to satisfy financial-sector regulatory monitoring compliance.</li>
+                </ul>
+            </div>
+
+            <!-- Job 7 -->
+            <div class="job-card">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Network Support Engineer</div>
+                        <div class="job-company">Strategic Development & Investment Associate</div>
+                    </div>
+                    <div class="job-meta">Sep 2009 – Feb 2011</div>
+                </div>
+                <ul class="bullet-list">
+                    <li>Supported underlying IT network environments across 25+ distributed endpoints to lock in business continuity and patch management safety.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Deep Strategic Core Architecture Mapping -->
+        <section id="technology-leadership">
+            <h2>Selected Technology & Platform Leadership</h2>
+            <div class="grid-two-col">
+                <div class="card-sub">
+                    <h3>Proactive NOC Monitoring</h3>
+                    <p>Designed corporate NOC tracking layers running on PRTG and MRTG telemetry infrastructure to eliminate operational single points of failure.</p>
+                </div>
+                <div class="card-sub">
+                    <h3>Enterprise Cloud Strategy</h3>
+                    <p>Led hybrid implementation architectures crossing Microsoft Azure frameworks, OneDrive business sync designs, and unified Office 365 governance layouts.</p>
+                </div>
+                <div class="card-sub">
+                    <h3>Cyber Perimeter Defense</h3>
+                    <p>Governed corporate endpoint security and threat visibilities using integrated BitDefender GravityZone policies and Sophos Central Intercept X controls.</p>
+                </div>
+                <div class="card-sub">
+                    <h3>Hybrid Datacenter Compute</h3>
+                    <p>Managed scalable physical on-prem datacenter arrays running Active Directory domains, VMware vSphere environments, and Hyper-V clusters.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Qualifications Grid Space -->
+        <section id="education-credentials">
+            <h2>Education & Global Credentials</h2>
+            
+            <h3 style="color: white; margin-bottom: 1rem; font-size: 1.3rem;">Academic Degrees</h3>
+            <div class="edu-item">
+                <div class="edu-title">MS — Information Security (1st Division)</div>
+                <div style="color: var(--text-muted); font-weight: 500; margin-top: 0.25rem;">NED University of Engineering and Technology, Karachi</div>
+            </div>
+            <div class="edu-item">
+                <div class="edu-title">BS — Computer Engineering (1st Division)</div>
+                <div style="color: var(--text-muted); font-weight: 500; margin-top: 0.25rem;">Sir Syed University of Engineering and Technology, Karachi</div>
+            </div>
+
+            <h3 style="color: white; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.3rem;">Global Industry Certifications</h3>
+            <div class="cert-grid">
+                <div class="cert-item">CHFI — Computer Hacking Forensic Investigator</div>
+                <div class="cert-item">MCSE — Private Cloud Expert</div>
+                <div class="cert-item">MCSA — Windows Server 2012 / 2008 & M365</div>
+                <div class="cert-item">CCNA — Routing & Switching (Cisco)</div>
+                <div class="cert-item">CT15 — Sophos Central Endpoint & Server</div>
+                <div class="cert-item">Microsoft ISA Server Certified</div>
+                <div class="cert-item">MCITP / MCTS / MCP (Microsoft Specialist)</div>
+                <div class="cert-item">VMware Certified Associate — Cloud / DCV</div>
+            </div>
+        </section>
+
+        <!-- Registrations, Languages and Identifiers -->
+        <section id="affiliations">
+            <h2>Memberships & Languages</h2>
+            <ul class="bullet-list">
+                <li><strong>Professional Body:</strong> Registered Professional Engineer, Pakistan Engineering Council (Reg. #: COMP/9003)</li>
+                <li><strong>Languages Profile:</strong> Urdu (Native) · English (Advanced Professional) · German (A1 — Goethe Certified)</li>
+            </ul>
+        </section>
+
+        <!-- Contact Entrypoints Block -->
+        <section id="contact">
+            <h2>Contact Connections</h2>
+            <div class="contact-grid">
+                <div class="contact-box">
+                    <h4>Corporate Email</h4>
+                    <p>faizan_shahzad@hotmail.com</p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.25rem;">Secondary: faizan4447@gmail.com</p>
+                </div>
+                <div class="contact-box">
+                    <h4>Direct Contact</h4>
+                    <p>+92 346 2685123</p>
+                </div>
+                <div class="contact-box">
+                    <h4>Base Location</h4>
+                    <p>Karachi, Pakistan</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Faizan Shahzad | Executive Portfolio Workspace</p>
+    </footer>
+
+</body>
+</html>
